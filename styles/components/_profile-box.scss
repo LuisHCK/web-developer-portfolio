@@ -1,0 +1,39 @@
+.ProfileBox {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    &-avatarContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-avatar {
+        width: 100%;
+        height: auto;
+        border-radius: 5em;
+        overflow: hidden;
+    }
+
+    &-contact,
+    &-skills {
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+        font-size: 14px;
+        width: 100%;
+        text-align: left;
+    }
+
+    &-listItem {
+        display: flex;
+        align-items: center;
+        padding: 10px 0px;
+        font-weight: 300;
+
+        a {
+            color: $text;
+        }
+    }
+}
