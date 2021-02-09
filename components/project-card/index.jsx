@@ -24,7 +24,7 @@ function ProjectCard(props) {
         ))
 
     return (
-        <div className="card">
+        <div className="ProjectCard card">
             <div className="card-image">
                 <figure className="image is-16by9">
                     <img className="adjusted-image" src={image} alt={name} />
