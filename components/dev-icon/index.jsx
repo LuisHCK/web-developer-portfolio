@@ -46,6 +46,7 @@ function DevIcon(props) {
 DevIcon.propTypes = {
     name: PropTypes.string,
     width: PropTypes.string,
+    height: PropTypes.string,
     color: PropTypes.string,
 }
 

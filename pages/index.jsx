@@ -4,6 +4,7 @@ import ProfileBox from '../components/profile-box'
 import MainLayout from '../layouts/main-layout'
 import AboutMeBox from '../components/about-me-box'
 import ProjectsBox from '../components/projects-box'
+import WorkExperience from '../components/work-experience'
 
 const Home = () => {
     return (
@@ -22,6 +23,8 @@ const Home = () => {
                             <AboutMeBox callToAction={{label: 'Read more'}} />
 
                             <ProjectsBox />
+
+                            <WorkExperience />
                         </div>
                     </div>
                 </div>

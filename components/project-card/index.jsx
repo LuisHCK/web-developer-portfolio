@@ -1,41 +1,45 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import DevIcon, { JAVASCRIPT, REACT } from '../dev-icon'
+import DevIcon, { REACT } from '../dev-icon'
 import Link from 'next/link'
+import parse from 'html-react-parser'
 
 function ProjectCard(props) {
-    const { name, description, image, stack } = props
+    const { name, description, image, stack, links } = props
 
     const renderStack = () =>
-        stack.map((name, index) => <DevIcon name={name} key={'tech-icon-' + index} />)
+        stack.map((name, index) => (
+            <DevIcon name={name} key={'tech-icon-' + index} width="22px" height="22px" />
+        ))
+
+    const renderLinks = () =>
+        links.map((link, index) => (
+            <div className="card-footer-item" key={'project-link-' + index}>
+                <Link href={link.url} passHref>
+                    <a target={link.target}>{link.label}</a>
+                </Link>
+            </div>
+        ))
 
     return (
         <div className="card">
             <div className="card-image">
-                <figure className="image is-3by2">
+                <figure className="image is-16by9">
                     <img className="adjusted-image" src={image} alt={name} />
                 </figure>
             </div>
 
             <div className="card-content">
-                <h4 className="has-text-weight-bold">{name}</h4>
+                <div className="is-flex is-justify-content-space-between">
+                    <h4 className="has-text-weight-bold">{name}</h4>
 
-                <div className="content">
-                    <p>{description}</p>
+                    <div>{renderStack()}</div>
                 </div>
 
-                <div className="content is-flex is-align-items-center is-justify-content-center pt-2 pb-2">
-                    {renderStack()}
-                </div>
+                <div className="content">{parse(description || '')}</div>
             </div>
 
-            <footer className="card-footer">
-                <p className="card-footer-item">
-                    <Link href="https://github.com/luishck" passHref>
-                        <a>View on GitHub</a>
-                    </Link>
-                </p>
-            </footer>
+            <footer className="card-footer">{renderLinks()}</footer>
         </div>
     )
 }
@@ -45,13 +49,24 @@ ProjectCard.propTypes = {
     description: PropTypes.string,
     image: PropTypes.string,
     stack: PropTypes.arrayOf(PropTypes.string),
+    links: PropTypes.arrayOf(
+        PropTypes.shape({
+            label: PropTypes.string,
+            url: PropTypes.string,
+            target: PropTypes.string,
+        })
+    ),
 }
 
 ProjectCard.defaultProps = {
     name: 'Demo project',
     description: 'Lorem ipsum dolor sit amet',
     image: 'https://picsum.photos/600',
-    stack: [REACT, JAVASCRIPT],
+    stack: [REACT],
+    links: [
+        { label: 'Read more', url: '/projects/1' },
+        { label: 'View on GitHub', url: 'https://github.com', target: '_blank' },
+    ],
 }
 
 export default ProjectCard

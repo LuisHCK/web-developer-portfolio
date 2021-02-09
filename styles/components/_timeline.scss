@@ -1,0 +1,37 @@
+.Timeline {
+    width: 100%;
+
+    ul {
+        position: relative;
+        padding-left: 2em;
+    }
+
+    li {
+        border-bottom: 2px solid transparentize($text, 0.8);
+        padding: 1em 0;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            font-size: 6em;
+            left: -32px;
+            top: 45px;
+            background-color: $purple;
+            width: 18px;
+            height: 18px;
+            border-radius: 32px;
+        }
+
+        &:not(&:last-child) {
+            &::after {
+                content: ' ';
+                border-left: 2px solid $purple;
+                height: 100%;
+                position: absolute;
+                left: -24px;
+                top: 50px;
+            }
+        }
+    }
+}
