@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Image from 'next/image'
 import Link from 'next/link'
 import { AtOutline, LocationOutline } from 'react-ionicons'
 
 function ProfileBox(props) {
-    const { name, role, email, country, skills } = props
+    const { name, role, email, country, skills, avatar } = props
 
     const renderSkills = () =>
         skills.map((skill, index) => (
@@ -17,7 +18,7 @@ function ProfileBox(props) {
         <section className="box ProfileBox">
             <div className="ProfileBox-avatarContainer">
                 <Image
-                    src="/images/avatar.png"
+                    src={avatar}
                     className="ProfileBox-avatar"
                     width={200}
                     height={200}
@@ -68,6 +69,16 @@ ProfileBox.defaultProps = {
         'Initiatives to hangout with the team',
         'Passion for teaching',
     ],
+    avatar: "/images/avatar.png"
+}
+
+ProfileBox.propTypes = {
+    name: PropTypes.string,
+    role: PropTypes.string,
+    email: PropTypes.string,
+    country: PropTypes.string,
+    skills: PropTypes.array,
+    avatar: PropTypes.string
 }
 
 export default ProfileBox

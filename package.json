@@ -16,5 +16,8 @@
     "react-ionicons": "^4.1.0",
     "sass": "^1.32.6",
     "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "js-yaml-loader": "^1.2.2"
   }
 }

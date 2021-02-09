@@ -1,0 +1,37 @@
+---
+- name: ADM2
+  description: A Web App to manage your small store.
+      Build with web technologies
+  stack:
+      - vue
+  content: https://raw.githubusercontent.com/LuisHCK/adm2/master/README.md
+  cover: https://raw.githubusercontent.com/LuisHCK/adm2/master/public/screenshots/30510e0b-5deb-4547-99c9-9b61aefb7587.jpeg
+  links:
+      - label: View on GitHub
+        url: https://github.com/LuisHCK/adm2
+        target: _blank
+
+- name: Marvelous App
+  description: A GatsbyJS test project that consumes Marvel's public API
+  stack:
+      - react
+  content: https://raw.githubusercontent.com/LuisHCK/marvelous-app-test/main/README.md
+  cover: https://i.ibb.co/jhTccxf/Iron-Man-2020-5-Marvelous-App.jpg
+  links:
+      - label: View on GitHub
+        url: https://github.com/LuisHCK/marvelous-app-test
+        target: _blank
+      - label: Demo
+        url: https://marverlous-app-test.netlify.app/
+        target: _blank
+
+- name: SAMSON Manage
+  description: Complete solution for Project Mangement for construction companies
+  stack:
+      - angular
+      - django
+  cover: https://samson-manage.com/wp-content/uploads/2020/01/82626476_175735640465152_185521455948103680_n.png
+  links:
+      - label: Demo
+        url: https://app.samson-manage.com
+        target: _blank

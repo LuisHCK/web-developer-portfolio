@@ -19,38 +19,7 @@ WorkExperience.propTypes = {
 
 WorkExperience.defaultProps = {
     title: 'My work experience 🐱‍👤',
-    jobs: [
-        {
-            title: 'Web developer',
-            subtitle: 'Smart Business Solutions',
-            date: 'jun. 2020 – today',
-            location: 'Nicaragua',
-        },
-        {
-            title: 'Web developer',
-            subtitle: 'Smart Business Solutions',
-            date: 'jun. 2020 – today',
-            location: 'Nicaragua',
-        },
-        {
-            title: 'Web developer',
-            subtitle: 'Smart Business Solutions',
-            date: 'jun. 2020 – today',
-            location: 'Nicaragua',
-        },
-        {
-            title: 'Web developer',
-            subtitle: 'Smart Business Solutions',
-            date: 'jun. 2020 – today',
-            location: 'Nicaragua',
-        },
-        {
-            title: 'Web developer',
-            subtitle: 'Smart Business Solutions',
-            date: 'jun. 2020 – today',
-            location: 'Nicaragua',
-        },
-    ],
+    jobs: [],
 }
 
 export default WorkExperience
