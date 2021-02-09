@@ -1,17 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { GitBranchOutline } from 'react-ionicons'
+import { Profile } from '../../data'
 
+function NavBar() {
+    const [menuIsOpen, setMenuIsOpen] = useState(false)
 
-function NavBar(props) {
+    const toggleMenu = () => setMenuIsOpen((prev) => !prev)
+
+    const navbarMenuClassNames = ['navbar-menu', menuIsOpen ? 'open' : 'closed'].join(' ')
+
     return (
         <nav className="navbar is-dark" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
                 <Link href="/" passHref>
-                    <a className="navbar-item has-text-weight-bold">
-                        <Image src="/images/avatar.png" height={28} width={28} />
-                        <span className="ml-2 is-size-4">AWDP</span>
+                    <a className="navbar-item has-text-weight-bold" aria-label={Profile.name}>
+                        <Image src="/images/logo.png" height={28} width={28} />
                     </a>
                 </Link>
 
@@ -20,7 +24,8 @@ function NavBar(props) {
                     className="navbar-burger"
                     aria-label="menu"
                     aria-expanded="false"
-                    data-target="navbarBasicExample"
+                    data-target="navbarMenu"
+                    onClick={toggleMenu}
                 >
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -28,7 +33,7 @@ function NavBar(props) {
                 </a>
             </div>
 
-            <div id="navbarBasicExample" className="navbar-menu">
+            <div id="navbarMenu" className={navbarMenuClassNames}>
                 <div className="navbar-start">
                     <Link href="/" passHref>
                         <a className="navbar-item">Home</a>
@@ -50,19 +55,6 @@ function NavBar(props) {
                                 <a className="navbar-item">Build a project</a>
                             </Link>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="navbar-end">
-                <div className="navbar-item">
-                    <div className="buttons">
-                        <Link href="https://github.com" passHref>
-                            <a className="button is-light" target="_blank">
-                                <GitBranchOutline height="22px" />
-                                Fork me!
-                            </a>
-                        </Link>
                     </div>
                 </div>
             </div>

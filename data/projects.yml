@@ -29,7 +29,7 @@
   description: Complete solution for Project Mangement for construction companies
   stack:
       - angular
-      - django
+      - python
   cover: https://samson-manage.com/wp-content/uploads/2020/01/82626476_175735640465152_185521455948103680_n.png
   links:
       - label: Demo

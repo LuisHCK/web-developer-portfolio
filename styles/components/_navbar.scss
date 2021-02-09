@@ -1,0 +1,13 @@
+.navbar {
+
+    @media screen and (max-width: 1023px) {
+        .navbar-menu.open {
+            display: flex;
+            background-color: inherit;
+        }
+
+        .navbar-start {
+            width: 100%;
+        }
+    }
+}

@@ -8,7 +8,7 @@ function AboutMeBox(props) {
         callToAction ? (
             <div className="AboutMeBox-callToAction mt-2">
                 <button className="button is-primary" onClick={callToAction.action}>
-                    {callToAction.icon ? <callToAction.button /> : null}
+                    {callToAction.icon ? callToAction.icon : null}
                     <span>{callToAction.label}</span>
                 </button>
             </div>
