@@ -15,7 +15,7 @@ function NavBar() {
             <div className="navbar-brand">
                 <Link href="/" passHref>
                     <a className="navbar-item has-text-weight-bold" aria-label={Profile.name}>
-                        <Image src="/images/logo.png" height={28} width={28} />
+                        <Image src="/images/logo.png" height={28} width={28} alt={Profile.name} />
                     </a>
                 </Link>
 
@@ -44,7 +44,7 @@ function NavBar() {
                     </Link>
 
                     <div className="navbar-item has-dropdown is-hoverable">
-                        <a className="navbar-link">Hire</a>
+                        <a href="#" className="navbar-link">Hire</a>
 
                         <div className="navbar-dropdown">
                             <Link href="/hire-full-time" passHref>

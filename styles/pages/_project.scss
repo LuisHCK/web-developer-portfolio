@@ -1,0 +1,35 @@
+.ProjectPage {
+    // Reset defaults
+    h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1em;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+    }
+
+    p {
+        margin-bottom: 0.5em;
+    }
+
+    ol,
+    ul {
+        padding-inline-start: 1.5em;
+
+        p {
+            margin-top: 0.5em;
+        }
+    }
+
+    pre {
+        font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+            'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+            'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
+        background-color: $dark-secondary;
+    }
+}

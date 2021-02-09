@@ -1,5 +1,6 @@
 ---
 - name: ADM2
+  slug: adm2
   description: A Web App to manage your small store.
       Build with web technologies
   stack:
@@ -10,8 +11,12 @@
       - label: View on GitHub
         url: https://github.com/LuisHCK/adm2
         target: _blank
+        rel: noreferrer
+      - label: Project details
+        url: '/projects/adm2'
 
 - name: Marvelous App
+  slug: marvelous-app
   description: A GatsbyJS test project that consumes Marvel's public API
   stack:
       - react
@@ -21,9 +26,13 @@
       - label: View on GitHub
         url: https://github.com/LuisHCK/marvelous-app-test
         target: _blank
+        rel: noreferrer
       - label: Demo
         url: https://marverlous-app-test.netlify.app/
         target: _blank
+        rel: noreferrer
+      - label: Project details
+        url: '/projects/marvelous-app'
 
 - name: SAMSON Manage
   description: Complete solution for Project Mangement for construction companies
@@ -35,3 +44,4 @@
       - label: Demo
         url: https://app.samson-manage.com
         target: _blank
+        rel: noreferrer

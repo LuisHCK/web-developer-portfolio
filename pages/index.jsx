@@ -11,7 +11,7 @@ import SEO from '../components/seo'
 const Home = () => {
     return (
         <MainLayout className="HomePage">
-            <SEO title={`${Profile.name} - ${Profile.title}`} description={Profile.short_desc} />
+            <SEO title={`${Profile.name} | ${Profile.title}`} description={Profile.short_desc} />
             <div className="container">
                 <div className="columns is-mobile is-multiline">
                     <div className="column is-one-third-desktop is-full-mobile HomePage-profileColumn">

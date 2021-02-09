@@ -16,7 +16,9 @@ function ProjectCard(props) {
         links.map((link, index) => (
             <div className="card-footer-item" key={'project-link-' + index}>
                 <Link href={link.url} passHref>
-                    <a target={link.target}>{link.label}</a>
+                    <a className="has-text-centered" target={link.target} rel={link.rel}>
+                        {link.label}
+                    </a>
                 </Link>
             </div>
         ))

@@ -29,6 +29,8 @@ export const Profile = profile
 
 /**
  * @typedef DevProject
+ * @property {String} name - Project name
+ * @property {String} slug - Project slug
  * @property {String} description - Project description text
  * @property {Array<String>} stack - Stack of techologies
  * @property {String} content - Content Link
@@ -53,3 +55,21 @@ export const Projects = projects
  * @type {Array<WorkExperience>}
  */
 export const WorkExp = workExperience
+
+/**
+ * Returns a project by it's Slug string
+ * @param {String} slug - Project slug
+ * @returns {DevProject}
+ */
+export const getProjectBySlug = (slug) => {
+    const project = Projects.find((project) => project.slug === slug)
+    return project || {}
+}
+
+/**
+ * Convert normal string to slug
+ * @param {String} name - Item name
+ */
+export const nameToSlug = (name = '') => {
+    return name.toLowerCase().split(' ').join('-')
+}

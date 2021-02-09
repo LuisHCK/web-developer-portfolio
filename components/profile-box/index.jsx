@@ -19,6 +19,7 @@ function ProfileBox(props) {
             <div className="ProfileBox-avatarContainer">
                 <Image
                     src={avatar}
+                    alt={`${name} | ${role}`}
                     className="ProfileBox-avatar"
                     width={200}
                     height={200}
@@ -69,7 +70,7 @@ ProfileBox.defaultProps = {
         'Initiatives to hangout with the team',
         'Passion for teaching',
     ],
-    avatar: "/images/avatar.png"
+    avatar: '/images/avatar.png',
 }
 
 ProfileBox.propTypes = {
@@ -78,7 +79,7 @@ ProfileBox.propTypes = {
     email: PropTypes.string,
     country: PropTypes.string,
     skills: PropTypes.array,
-    avatar: PropTypes.string
+    avatar: PropTypes.string,
 }
 
 export default ProfileBox
