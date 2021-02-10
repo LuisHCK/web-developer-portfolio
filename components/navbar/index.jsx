@@ -42,20 +42,6 @@ function NavBar() {
                     <Link href="/projects" passHref>
                         <a className="navbar-item">Projects</a>
                     </Link>
-
-                    <div className="navbar-item has-dropdown is-hoverable">
-                        <a href="#" className="navbar-link">Hire</a>
-
-                        <div className="navbar-dropdown">
-                            <Link href="/hire-full-time" passHref>
-                                <a className="navbar-item">Full time</a>
-                            </Link>
-
-                            <Link href="/hire-for-a-project" passHref>
-                                <a className="navbar-item">Build a project</a>
-                            </Link>
-                        </div>
-                    </div>
                 </div>
             </div>
         </nav>
