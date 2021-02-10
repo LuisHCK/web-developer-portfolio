@@ -7,7 +7,7 @@ function ProjectLayout(props) {
     return (
         <main className="MainLayout" {...props}>
             <NavBar />
-            <div className="container pt-5 pb-5">
+            <div className="container is-max-desktop p-5">
                 <article className="box">{children}</article>
             </div>
         </main>
